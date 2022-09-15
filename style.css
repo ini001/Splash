@@ -75,7 +75,6 @@ body{
 
 }
 .bulb{
-    /* display:flex; */
     width:30px;
     margin:0 20px 20px 10px; 
     position:relative;
@@ -109,31 +108,78 @@ body{
     width:100%;
     z-index:11111;
 }
+@media screen and (max-width:1024px){
+    .navLists{
+        width:90%;
+    }
+    .black{
+        margin:0;
+    }
+    .black a{
+        font-size: 15px;
+        padding:8px 20px;
+    }
+    .navbar{
+        padding:10px 20px 10px 80px;
+    }
+    .navlink {
+        padding:0 30px;
+}
+
 
 @media screen and (max-width:768px){
+    body{
+        overflow-x:hidden;
+    }
     .navLists{
         display:block;
         position:absolute;
         top:0px;
         right:0;
         width:100%;
-        background:#ccc;
-        height:300px;
-       
+        background:rgb(131, 131, 131);
+        height:300px; 
+        transform:translateY(-100%); 
+        transition:transform 0.3s ease-in;
     }
     .navlink{
         display:flex;
         justify-content:center;
         margin:30px;
+        opacity:0;
     }
     .hamburger{
-       
+       margin:20px 0;
+       cursor:pointer;
     }
-    .bar{
-        display:flex;
-        margin:20px 0px;
-        z-index:1111111;
+    .line1,.line2,.line3{
+        display:block;
+        margin:4px 0px;
+        z-index:11111111;
+        background: #000;
+        width:18px;
+        height:3px;
     }
-    .navLists
-
+    .nav-active{
+        transform:translateY(0%);     
+    }
+}
+@keyframes navFade{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.toggle .line1{
+    transform:rotate(-45deg)translate(-5px,5px);
+}
+.toggle .line2{
+    opacity:0;
+}
+.toggle .line3{
+    transform:rotate(45deg)translate(-5px,-5px);
 }
