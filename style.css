@@ -65,9 +65,15 @@ body{
 .words h1{
     width:50%;
     margin-bottom:20px;
+    
 }
 .words p{
-    font-size:12px;
+    font-size:15px;
+    max-width:60%;
+}
+.subtitle{
+    font-size:16px;
+    width:50%;
 }
 .bulbwords1,.bulbwords2{
     display:flex;
@@ -124,6 +130,12 @@ body{
     }
     .navlink {
         padding:0 30px;
+    }
+    .subtitle{
+            font-size:16px;
+            width:50%;
+    }
+
 }
 
 
@@ -163,7 +175,29 @@ body{
     .nav-active{
         transform:translateY(0%);     
     }
+    .about{
+        padding:20px;
+    }
+    .words h1{
+        font-size:30px;
+        
+    }
+    .words p{
+        font-size:16px;
+    }
+    .subtitle{
+        width:60%;
+        margin: 30px 0;
+    }
+    .pencilimg{
+        width:40%;
+    }
+    .box{
+        top:5px;
+        left:6px;
+    }
 }
+
 @keyframes navFade{
     from{
         opacity:0;
